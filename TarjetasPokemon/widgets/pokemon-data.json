@@ -1,0 +1,11 @@
+{
+  "nombre": "",
+  "numero": "",
+  "moneda": "MXN",
+  "titulo": "Consulta el precio de una carta",
+  "linea1": "Escribe el nombre (en inglés) o el número impreso y pulsa Buscar.",
+  "precio": "",
+  "linea2": "",
+  "linea3": "",
+  "color": "Default"
+}

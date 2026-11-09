@@ -1,0 +1,103 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "🎴 Precio de carta Pokémon",
+      "size": "Medium",
+      "weight": "Bolder",
+      "wrap": true
+    },
+    {
+      "type": "Input.Text",
+      "id": "nombre",
+      "label": "Nombre (en inglés)",
+      "placeholder": "Ej. Charizard",
+      "value": "${nombre}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.Text",
+              "id": "numero",
+              "label": "Número (opcional)",
+              "placeholder": "Ej. 25/165",
+              "value": "${numero}"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "id": "moneda",
+              "label": "Moneda",
+              "style": "compact",
+              "value": "${moneda}",
+              "choices": [
+                { "title": "Pesos (MXN)", "value": "MXN" },
+                { "title": "Dólares (USD)", "value": "USD" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "${titulo}",
+      "weight": "Bolder",
+      "wrap": true,
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${linea1}",
+      "isSubtle": true,
+      "wrap": true,
+      "spacing": "None"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${precio}",
+      "size": "ExtraLarge",
+      "weight": "Bolder",
+      "color": "${color}",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "${linea2}",
+      "wrap": true,
+      "spacing": "None"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${linea3}",
+      "isSubtle": true,
+      "wrap": true,
+      "spacing": "None"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "Buscar",
+      "verb": "buscar"
+    },
+    {
+      "type": "Action.Execute",
+      "title": "Abrir en la app",
+      "verb": "abrir-app"
+    }
+  ]
+}

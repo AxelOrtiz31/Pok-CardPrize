@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Precio de Cartas Pokémon</title>
+
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" href="./icon-192.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./pokemon.css">
+</head>
+
+<body>
+
+    <button class="drag" type="button"
+        aria-label="Ocultar encabezado"
+        aria-expanded="true">
+        <span class="drag-arrow">⌃</span>
+    </button>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="brand-icon" aria-hidden="true">TCG</div>
+            <div class="brand-text">
+                <h1>Precio de Cartas Pokémon</h1>
+                <p>Sube una foto y consulta su precio de mercado</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <span class="eyebrow">COLECCIONISMO</span>
+            <h2>¿Cuánto vale tu carta?</h2>
+            <p>
+                Toma o sube una foto de la carta completa, de frente y bien
+                iluminada. La app leerá el nombre y el número impreso y
+                buscará su precio de mercado.
+            </p>
+        </section>
+
+        <div class="subir">
+            <input type="file" id="foto" accept="image/*" hidden>
+            <button type="button" id="btn-foto" class="btn-principal">
+                📷 Subir foto de la carta
+            </button>
+            <img id="vista-previa" class="vista-previa" alt="Vista previa de la carta" hidden>
+        </div>
+
+        <p id="estado" class="estado" aria-live="polite">
+            También puedes buscar escribiendo los datos a mano.
+        </p>
+
+        <form id="busqueda" novalidate>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="nombre">Nombre de la carta (en inglés)</label>
+                    <input type="text" id="nombre" placeholder="Ej. Charizard" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Número impreso</label>
+                    <input type="text" id="numero" placeholder="Ej. 25/165" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="moneda">Moneda</label>
+                    <select id="moneda">
+                        <option value="MXN" selected>Pesos mexicanos (MXN)</option>
+                        <option value="USD">Dólares (USD)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-buscar" class="btn-principal">
+                Buscar precio <span aria-hidden="true">→</span>
+            </button>
+
+            <p class="form-note">
+                Si la carta está en español, el número y el total
+                (por ejemplo 025/165) funcionan mejor que el nombre.
+            </p>
+        </form>
+
+        <section id="resultados" class="resultados" aria-live="polite"></section>
+        <section id="detalle" class="detalle" aria-live="polite"></section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            Precios de referencia (TCGplayer vía pokemontcg.io), carta cercana a
+            nueva. Aplicación no afiliada a The Pokémon Company.
+        </p>
+    </footer>
+
+    <script src="./pokemon-core.js"></script>
+    <script src="./pokemon.js"></script>
+
+</body>
+</html>

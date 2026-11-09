@@ -1,0 +1,45 @@
+{
+  "id": "./",
+  "lang": "es",
+  "name": "Precio de Cartas Pokémon",
+  "short_name": "Precio Cartas",
+  "description": "Sube una foto de tu carta Pokémon y consulta su precio de mercado en pesos mexicanos o dólares",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "orientation": "any",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "widgets": [
+    {
+      "name": "Precio de carta",
+      "short_name": "Precio carta",
+      "description": "Consulta el precio de mercado de una carta Pokémon por nombre o número",
+      "tag": "pokemon-precio-widget",
+      "template": "pokemon-precio-widget",
+      "ms_ac_template": "./widgets/pokemon-template.json",
+      "data": "./widgets/pokemon-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "./widgets/screenshot-widget.png",
+          "sizes": "600x400",
+          "label": "Widget de precio de cartas Pokémon"
+        }
+      ],
+      "icons": [
+        { "src": "./icon-512.png", "sizes": "512x512" }
+      ],
+      "auth": false,
+      "multiple": false
+    }
+  ]
+}
