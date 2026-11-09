@@ -1,8 +1,8 @@
 {
   "id": "./",
   "lang": "es",
-  "name": "Precio de Cartas Pokémon",
-  "short_name": "Precio Cartas",
+  "name": "TCG Card Price",
+  "short_name": "TCG Card Price",
   "description": "Sube una foto de tu carta Pokémon y consulta su precio de mercado en pesos mexicanos o dólares",
   "start_url": "./",
   "scope": "./",
